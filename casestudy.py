@@ -141,4 +141,22 @@ print(gender_salstat)
 # Frequency Distribution of 'Salary status'
 
 salstat = sns.countplot(data2['SalStat'])
+"""
+75% of people's salary status is <= 50000
+25% od peoples salary status is > 50000
+"""
+
+###################   Histogram of Age ######################
+sns.distplot(data2['age'], bins=10, kde=False)
+#Conlusion : People with age 20-45 are high in frequency
+
+###################   Box Plot - Age vs salary  status ################
+# A bivariate analysis to check how age is affecting the salary  status
+sns.boxplot(x='SalStat', y='age', data=data2)
+data2.groupby('SalStat')['age'].median()
+
+
+
+
+
 
