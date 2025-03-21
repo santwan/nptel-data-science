@@ -156,6 +156,34 @@ sns.boxplot(x='SalStat', y='age', data=data2)
 data2.groupby('SalStat')['age'].median()
 
 
+#==============================================================================
+#Logistic Regression
+#=========================================================================================
+data2['SalStat'] = data2['SalStat'].map({' less than or equal to 50,000':0, ' greater than 50,000':1})
+print(data2) #integer encoding
+
+new_data = pd.get_dummies(data2, drop_first=True) #one hot encoding #converting catagorical data to dummi
+
+#Storing teh column names
+columns_list = list(new_data.columns)
+print(columns_list)
+
+#Separating the input names from the data
+features = list(set(columns_list)-set(['SalStat']))
+print(features)
+
+#Storing the output values in y
+y = new_data['SalStat'].values
+print(y)
+
+#Splitting the data into train and test
+
+
+
+
+
+
+
 
 
 
