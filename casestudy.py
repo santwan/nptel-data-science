@@ -201,5 +201,19 @@ prediction = logistic.predict(test_x)
 print(prediction)
 
 
+#Confusion matrix 
+confusion_matrix = confusion_matrix(test_y, prediction)
+print(confusion_matrix)
+
+from sklearn.metrics import accuracy_score
+
+#Calculating acuracy 
+accuracy = accuracy_score(test_y, prediction)
+print(accuracy)
+
+
+
+
+
 
 
