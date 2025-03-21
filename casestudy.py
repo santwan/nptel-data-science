@@ -176,12 +176,16 @@ print(features)
 y = new_data['SalStat'].values
 print(y)
 
+#Storing the values from the features
+x = new_data[features].values
+print(x)
+
+
 #Splitting the data into train and test
+train_x,test_x,train_y,test_y = train_test_split(x,y,test_size=0.3, random_state = 0)
 
 
-
-
-
+#
 
 
 
